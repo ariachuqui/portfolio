@@ -1,0 +1,105 @@
+.contact__container {
+    width: 90%;
+    max-width: 800px;
+    margin: -220px auto 0;
+}
+
+.contact__detail1, 
+.contact__detail2,
+.contact__detail3,
+.contact__detail4,
+.contact__detail5,
+.contact__detail6,
+.contact__detail7 {
+    pointer-events: none;
+}
+
+.contact__detail5,
+.contact__detail6,
+.contact__detail7 {
+    display: none;
+}
+
+.contact__detail1 {
+    width: 3.5rem;
+    bottom: 6rem;
+    left: 1rem;
+}
+
+.contact__detail2 {
+    width: 3.5rem;
+    top: 1rem;
+    left: 2rem;
+    transform: rotate(180deg);
+}
+
+.contact__detail3 {
+    width: 3.5rem;
+    bottom: 3rem;
+    max-width: 80px;
+    right: 1rem;
+}
+
+.contact__detail4 {
+    width: 2rem;
+    right: 2rem;
+    top: 8rem;
+    transform: rotate(180deg);  
+}
+
+@media screen and (min-width: 768px) {
+    .contact__detail5,
+    .contact__detail6,
+    .contact__detail7 {
+        display: block;
+    }
+
+    .contact__detail1 {
+        width: 4rem;
+        top: 2rem;
+        left: 5rem;
+        bottom: inherit;
+    }
+    
+    .contact__detail2 {
+        width: 2.3rem;
+        top: inherit;
+        bottom: 6rem;
+        max-width: 80px;
+        left: 28rem;
+    }
+    
+    .contact__detail3 {
+        width: 3.5rem;
+        top: 5rem;
+        bottom: inherit;
+        right: 7rem;
+    }
+    
+    .contact__detail4 {
+        width: 2.5rem;
+        right: 3.5rem;
+        top: inherit;
+        bottom: 12rem;
+    }
+
+    .contact__detail5 {
+        width: 2.5rem;
+        left: 11rem;
+        top: 17rem;
+        transform: rotate(180deg);  
+    }
+
+    .contact__detail6 {
+        width: 5rem;
+        left: 7rem;
+        bottom: 3rem;
+    }
+    
+    .contact__detail7 {
+        width: 5rem;
+        right: 6rem;
+        top: inherit;
+        bottom: 6rem;
+    }
+}

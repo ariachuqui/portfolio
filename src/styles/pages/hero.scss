@@ -1,0 +1,75 @@
+.hero__logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    .hero__profession {
+        margin-bottom: 1rem;
+    }
+}
+
+.hero__detail1, 
+.hero__detail2,
+.hero__detail3,
+.hero__detail4 {
+    pointer-events: none;
+}
+
+.hero__detail1 {
+    width: 3.5rem;
+    top: 0;
+    left: 2rem;
+    transform: rotate(180deg);
+}
+
+.hero__detail2 {
+    bottom: 3rem;
+    max-width: 80px;
+    right: 5rem;
+}
+
+.hero__detail3 {
+    width: 3.5rem;
+    bottom: 9rem;
+    left: 3rem;
+}
+
+.hero__detail4 {
+    width: 2rem;
+    right: 2rem;
+    top: 10rem;
+    transform: rotate(180deg);  
+}
+
+@media screen and (max-width: 768px) {
+    .hero__logo {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero__detail1 {
+        width: 3rem;
+        top: 2.5rem;
+        left: 5rem;
+    }
+    
+    .hero__detail2 {
+        right: inherit;
+        max-width: 80px;
+        left: 30rem;
+    }
+    
+    .hero__detail3 {
+        width: 3.5rem;
+        top: 7rem;
+        left: 20rem;
+        bottom: inherit;
+    }
+    
+    .hero__detail4 {
+        width: 2.5rem;
+        right: 27rem;
+        top: inherit;
+        bottom: 12rem;
+    }
+}

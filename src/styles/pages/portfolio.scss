@@ -1,0 +1,280 @@
+//Porfolio generals
+.portfolio__board {
+    margin-top: -100px;
+}
+
+.portfolio__container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+//Porfolio Board
+.portfolio__proyect-alert {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    gap: .3rem;
+    border-radius: 50%;
+    background: rgba( $lighten-main, .8);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.portfolio__proyect {
+    width: 50%;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .portfolio__proyect-img::after {
+            background: rgba(#000000, .8);
+        }
+
+        .portfolio__proyect-alert {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.portfolio__proyect-img{
+    position: relative;
+
+    img {
+        vertical-align: top;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: $transition;
+
+    }
+}
+
+//Porfolio Single Proyect
+.portfolio__close {
+    position: absolute;
+    right: .5rem;
+    top: 0.3rem;
+    text-align: end;
+    padding: 0.8rem 1rem 0;
+    cursor: pointer;
+    z-index: 100;
+    
+    i {
+        transition: $transition;
+    }
+
+    &:hover i {
+        color: #e5383b;
+    }
+}
+
+.portfolio__single-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 600;
+    opacity: 0;
+}
+
+.portfolio__single-background {
+    width: 100%;
+    height: 100%;
+    background: rgba(black, .8);
+}
+
+.portfolio__single {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: $super-darken-main;
+    overflow: hidden;
+}
+
+.portfolio_arrow {
+    display: none;
+}
+
+//Porfolio: Single Proyect Content
+.portfolio__single-content {
+    display: grid;
+    grid-template-rows: 5;
+    text-align: center;
+    height: 100%;
+}
+
+.portfolio__single-title {
+    padding-top: 2.5rem;
+}
+
+.portfolio__single-img {
+    height: 25vh;
+    margin-top: 10px;
+}
+
+.portfolio__single-desc {
+    line-height: 25px;
+    margin-bottom: 1rem;
+}
+
+.portfolio__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    .portfolio__img, i {
+        width: 33%;
+        margin-bottom: 5px;
+    }
+
+    .skills__img {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+.portfolio__single-links {
+    display: flex;
+    align-self: flex-end;
+}
+
+.portfolio_square {
+    flex-grow: 1;
+    background: $darken-main;
+    padding: .8rem;
+
+    transition: $transition;
+    cursor: pointer;
+
+    p {
+        width: 100%;
+    }
+    
+    &:hover {
+        background: $main;
+        .sidebar_icon {
+            color: $darken-main;
+        }
+
+        p {
+            color: $darken-main;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .portfolio__proyect {
+        width: 20%;
+    }
+
+    .portfolio_arrow {
+        display: flex;
+        color: white;
+        width: 38px;
+        height: 38px;
+        top: 50%;
+        transform: translateY(-50%) translateX(0);
+        border-radius: 50%;
+        background: rgba($black, .5);
+        cursor: pointer;
+        transition: $transition;
+    }
+    
+    .portfolio__single {
+        width: 85%;
+        height: 80vh;
+    }
+
+    .portfolio_arrow.left{
+        left: 0.8rem;
+        &:hover {
+            transform: translateY(-50%) translateX(-0.4rem);
+        }
+    }
+    
+    .portfolio_arrow.right{
+        right: 0.8rem;
+    
+        &:hover {
+            transform: translateY(-50%) translateX(0.4rem);
+        }
+    }
+
+    .portfolio__single-content {
+        width: 85%;
+        padding: 1rem 0 0;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10% 50% 25% 15%;
+        grid-template-areas: "title   title"
+                             "img   description"
+                             "technologies   technologies"
+                             "links links";
+    }
+
+    .portfolio__single-title {
+        grid-area: title;
+        padding-top: 25px;
+    }
+
+    .portfolio__single-img {
+        grid-area: img;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .portfolio__single-desc {
+        grid-area: description;
+        margin: 0 auto;
+    }
+
+    .portfolio__single-tech {
+        grid-area: technologies;
+
+        .portfolio__skills {
+            max-width: 250px;
+            margin: 10px auto;
+        }
+    }
+
+    .portfolio__single-links {
+        grid-area: links;
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+
+        p {
+            margin-bottom:5px;
+        }
+
+        .sidebar_icon {
+            color: $gray;
+            font-size: clamp(35px, 4.8vw, 30px);
+        }
+    }
+
+
+
+    
+}

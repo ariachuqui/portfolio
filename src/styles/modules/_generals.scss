@@ -1,0 +1,51 @@
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-left-10 {
+    margin-left: 1rem;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.margin-b10 {
+    margin-bottom: 10px;
+}
+
+.line {
+    background: $line-color;
+    height: 1px;
+    width: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100vh;
+}
+
+.desktop-d-none {
+    display: none;
+}
+
+
+

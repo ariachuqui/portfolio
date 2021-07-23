@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;800&display=swap');
+
+// ============= UTILS =============
+@import './utils/variables';
+
+// ============= BASE =============
+@import './base/normalize';
+@import './base/settings';
+@import './base/fonts';
+
+// ============= MODULES =============
+@import './modules/grid';
+@import './modules/btn';
+@import './modules/form';
+@import './modules/generals';
+@import './modules/alert';
+
+// ============= LAYOUTS =============
+@import './layout/sidebar';
+@import './layout/title';
+@import './layout/draws';
+
+// ============= PAGES =============
+@import './pages/hero';
+@import './pages/skills';
+@import './pages/portfolio';
+@import './pages/contact';

@@ -1,0 +1,85 @@
+.skills{
+    perspective: 900px;
+}
+
+.skills__board-container {
+    margin-top: -50px;
+    min-height: 70vh;
+    display: flex;align-items: center;
+}
+
+.skills__board {
+    background: $darken-main;
+    border-radius: 10px;
+    padding: 0 0 2rem;
+    box-shadow: $shadow-1;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+.skills__skill {
+    position: relative;
+    width: 33%;
+    margin-top: 2rem;
+}
+
+.skills__img {
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.skills__title {
+    text-shadow: 0px 11px 10px rgba($super-darken-main ,0.8);
+    transition: all 0.75s ease-out;
+    transform: translateZ(0);
+}
+
+.popout {
+    transform: translateZ(10px);
+}
+
+.fa-html5 {
+    color: #e34f26;
+}
+
+.fa-css3-alt {
+    color: #1877f2;
+}
+
+.fa-js-square {
+    color: #f7df1e;
+}
+
+.fa-figma {
+    color: #EA4C1D;
+}
+
+.fa-sass {
+    color: #D25191;
+}
+
+.fa-bootstrap {
+    color: #6C10ED;
+}
+
+.fa-react {
+    color: #00d8ff;
+}
+
+.fa-git-alt {
+    color: #7248B6
+}
+
+.firebase.png {
+    color: #E84E31;
+}
+
+.fa-node-js {
+    color: #6cc24a;
+}
+
+@media screen and (min-width: 768px) {
+    .skills__skill {
+        width: 20%;
+    }
+}

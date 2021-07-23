@@ -1,0 +1,23 @@
+.btn {
+    display: block;
+    padding: .8em 4em;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 1.03rem;
+    
+    cursor: pointer;
+}
+
+
+.btn-2 {
+    background: $super-darken-main;
+    color: $main;
+    border: 2px solid $main;
+
+    transition: $transition;
+
+    &:hover {
+        background: $main;
+        color: white;
+    }
+}
