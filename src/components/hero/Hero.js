@@ -26,16 +26,16 @@ export const Hero = () => {
             <Draw1 />
             <Sidebar />
 
-            <div className="hero__detail1 absolute">
+            <div className="hero__detail1 animate__animated animate__fadeIn absolute">
                 <Detail1 />
             </div>
-            <div className="hero__detail2 absolute">
+            <div className="hero__detail2 animate__animated animate__fadeIn absolute">
                 <Detail1 />
             </div>
-            <div className="hero__detail3 absolute">
+            <div className="hero__detail3 animate__animated animate__fadeIn absolute">
                 <Detail2 />
             </div>
-            <div className="hero__detail4 absolute">
+            <div className="hero__detail4 animate__animated animate__fadeIn absolute">
                 <Detail2 />
             </div>
         </main>
