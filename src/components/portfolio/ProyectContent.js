@@ -2,11 +2,13 @@ import React from 'react';
 import { imagesProyects } from '../../data/data';
 import { SkillLogo } from '../skills/SkillLogo';
 
-export const ProyectContent = ({ idProyect, animateContent }) => {
+export const ProyectContent = ({ idProyect, animateContent, inSpanish }) => {
+
     const { 
         title, 
         img,
-        description, 
+        descriptionSpanish,
+        descriptionEnglish,
         frontendTech, 
         backendTech, 
         frontendGit, 
@@ -31,7 +33,7 @@ export const ProyectContent = ({ idProyect, animateContent }) => {
             
             {/* "description" */}
             <p className="portfolio__single-desc c-white f-300 portfolio__container flex-center">
-                { description } 
+                { inSpanish ? descriptionSpanish : descriptionEnglish } 
             </p>
             
             {/* "technologies" */}

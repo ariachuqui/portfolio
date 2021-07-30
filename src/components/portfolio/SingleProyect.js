@@ -3,8 +3,9 @@ import { imagesProyects } from '../../data/data';
 import { ProyectContent } from './ProyectContent';
 
 export const SingleProyect = ({ idProyect, setSingleProyect }) => {
-    const [animateContainer, setAnimateContainer] = useState('')
-    const [animateContent, setAnimateContent] = useState('')
+    const [animateContainer, setAnimateContainer] = useState('');
+    const [animateContent, setAnimateContent] = useState('');
+    const [inSpanish, setInSpanish] = useState(false);
 
     //Animate when the user open de proyect
     useEffect(() => {
@@ -41,6 +42,12 @@ export const SingleProyect = ({ idProyect, setSingleProyect }) => {
             setAnimateContent( '' );
         }, 500);
     }
+
+    //Handle Languages 
+    const handleLanguage = () => {
+        setInSpanish( prev => !prev );
+    }
+
     return (
         <div className={`portfolio__single-container animate__animated ${ animateContainer } animate__faster`} >
             <div 
@@ -49,6 +56,17 @@ export const SingleProyect = ({ idProyect, setSingleProyect }) => {
             ></div>
 
             <div className="portfolio__single relative" >
+
+                <div className="btn-language absolute">
+                    <p className="f-200 c-white f-bold">EN</p>
+                    <div 
+                        className="circle-container"
+                        onClick={ handleLanguage }
+                    >
+                        <div className={`circle ${inSpanish && 'circle-move'}`}></div>
+                    </div>
+                    <p className="f-200 c-white f-bold">ES</p>
+                </div>
                 <div 
                     className="portfolio__close c-white"
                     onClick ={ () => setSingleProyect({state: false, idProyect: null}) }
@@ -63,7 +81,7 @@ export const SingleProyect = ({ idProyect, setSingleProyect }) => {
                     <i className="fas fa-chevron-left f-200"></i>
                 </div>
 
-                <ProyectContent idProyect={ idProyect } animateContent={ animateContent } />
+                <ProyectContent idProyect={ idProyect } animateContent={ animateContent } inSpanish={ inSpanish } />
 
                 <div 
                     className="portfolio_arrow right absolute flex-center"
